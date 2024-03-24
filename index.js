@@ -2,7 +2,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import express from 'express';
 import dotenv from 'dotenv';
-import cors from 'cors';
+// import cors from 'cors';
 import connectDB from './DataBase/config/connectDB.js';
 import userRoutes from './Routes/userRouter.js';
 import productRoutes from './Routes/allproductRoutes.js';
