@@ -2,7 +2,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import express from 'express';
 import dotenv from 'dotenv';
-// import cors from 'cors';
+import cors from 'cors';
 import connectDB from './DataBase/config/connectDB.js';
 import userRoutes from './Routes/userRouter.js';
 import productRoutes from './Routes/allproductRoutes.js';
@@ -21,11 +21,11 @@ const port = process.env.PORT || 5000;
 const DATABASE_URL = process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017';
 
 app.use(express.json());
-// app.use(cors());
-// app.use(cors({
-//     credentials: true,
-//     origin: 'http://localhost:5173'
-// }));
+app.use(cors());
+app.use(cors({
+    credentials: true,
+    origin: 'https://bisht-ecommerce-store.onrender.com/'
+}));
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://bisht-ecommerce-store.onrender.com/');
