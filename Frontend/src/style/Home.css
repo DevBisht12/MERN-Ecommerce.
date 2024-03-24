@@ -19,10 +19,7 @@ h2 {
   width: 6rem;
   margin: -13px;
 }
-#btn1:hover {
-  background-color: white;
-  color: black;
-}
+
 @keyframes shake {
   0% {
     transform: translateX(0);
@@ -113,6 +110,10 @@ h2 {
 .btn1 {
   background-color: black !important;
   color: white;
+}
+#btn1:hover {
+  background-color: white ;
+  color: black;
 }
 
 /* Category Section */
