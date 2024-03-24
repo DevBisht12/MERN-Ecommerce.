@@ -23,8 +23,9 @@ const DATABASE_URL = process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017';
 app.use(express.json());
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:5173'
+    origin: 'https://bisht-ecommerce-store.onrender.com/'
 }));
+app.options('*', cors());
 
 
 app.use(cookieParser());
