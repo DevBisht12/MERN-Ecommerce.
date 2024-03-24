@@ -29,3 +29,8 @@ This is an ecommerce website built with Vite.js, Express.js, MongoDB, Mongoose, 
   - JSON Web Tokens (JWT) for authentication
   - bcryptjs for password hashing
   - Stripe for payment processing
+
+- Project Preview:
+  
+
+  ![Ecommerce](https://github.com/bisth12/MERN-Ecommerce./assets/161915446/ac52d444-70c8-4d26-a7b2-9a93658fb472)
