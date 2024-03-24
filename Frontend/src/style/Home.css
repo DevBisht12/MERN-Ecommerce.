@@ -19,6 +19,10 @@ h2 {
   width: 6rem;
   margin: -13px;
 }
+#btn1:hover {
+  background-color: white;
+  color: black;
+}
 @keyframes shake {
   0% {
     transform: translateX(0);

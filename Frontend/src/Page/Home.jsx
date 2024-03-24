@@ -55,7 +55,7 @@ const Home = () => {
           </div>
           <div className="three_section mid">
             <div className="button_section">
-              <button className="btn1">
+              <button className="btn1" id="btn1">
                 SHOP NOW
                 <span id="arrowIcon"> &#10230; </span>
               </button>
