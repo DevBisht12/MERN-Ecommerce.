@@ -47,7 +47,7 @@ const LogIn = () => {
       }
     }
     setError(newErrors);
-    return Object.keys(newErrors).length === 0; //not clear about this part
+    return Object.keys(newErrors).length === 0; 
   };
   const handleSubmit = (event) => {
     event.preventDefault();

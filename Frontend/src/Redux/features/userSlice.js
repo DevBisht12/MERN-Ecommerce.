@@ -15,6 +15,9 @@ export const loginUser = createAsyncThunk(
 
       if (!response.ok) {
         const data = await response.json();
+        console.log(data)
+        console.log(data.message)
+        window.alert(data.message);
         return thunkAPI.rejectWithValue(data);
       }
 
@@ -41,6 +44,9 @@ export const registerUser = createAsyncThunk(
 
       if (!response.ok) {
         const data = await response.json();
+        console.log(data)
+        console.log(data.message)
+        window.alert(data.message);
         return thunkAPI.rejectWithValue(data);
       }
 
