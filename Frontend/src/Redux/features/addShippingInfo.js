@@ -10,7 +10,7 @@ export const shippingAddressSlice = createSlice({
     reducers: {
         setShippingAddress: (state, action) => {
             state.shippingAddress = action.payload;
-            localStorage.setItem('shippingAddress', JSON.stringify(action.payload)); // Update localStorage after updating state
+            localStorage.setItem('shippingAddress', JSON.stringify(action.payload))
         }
     }
 });

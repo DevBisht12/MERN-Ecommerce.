@@ -1,4 +1,6 @@
+import { Cookie } from "@mui/icons-material";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { json } from "body-parser";
 
 export const loginUser = createAsyncThunk(
   "user/loginUser",
@@ -15,8 +17,6 @@ export const loginUser = createAsyncThunk(
 
       if (!response.ok) {
         const data = await response.json();
-        console.log(data)
-        console.log(data.message)
         window.alert(data.message);
         return thunkAPI.rejectWithValue(data);
       }
@@ -44,8 +44,6 @@ export const registerUser = createAsyncThunk(
 
       if (!response.ok) {
         const data = await response.json();
-        console.log(data)
-        console.log(data.message)
         window.alert(data.message);
         return thunkAPI.rejectWithValue(data);
       }
@@ -108,8 +106,9 @@ export const logoutUser = createAsyncThunk(
   
 const initialState = {
   isAuthenticated: false,
-  user: {},
+  user: JSON.parse(localStorage.getItem('user'))||{},
   error: null,
+
 };
 
 
@@ -120,7 +119,8 @@ export const userSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(loginUser.fulfilled, (state, { payload }) => {
       state.user = payload;
-      state.isAuthenticated = true; 
+      state.isAuthenticated = true;
+      localStorage.setItem('user',JSON.stringify(state.user))
     });
     builder.addCase(loginUser.rejected, (state, { payload }) => {
       state.error = payload;
